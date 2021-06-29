@@ -1,0 +1,214 @@
+:root{
+    --header-height:100px;
+    --img-size: 200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    font-family: verdana;
+    font-size: 20px;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+#cradevin-img{
+    width: var(--img-size);
+    height: var(--img-size);
+    border-radius: 5px;
+}
+
+a{
+    color: inherit;
+    font-style: italic;
+    font-size: 17px;
+    border-bottom: 1px solid purple;
+}
+
+a:hover{
+    border-bottom: 0;
+}
+
+.submitbutton{
+    cursor: pointer;
+    width: 400px;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+input, textarea{
+    max-width: 400px;
+    min-width: 400px;
+    width: 400px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+    
+    font-family: verdana;
+    font-size: 15px;    
+}
+
+textarea{
+    min-height: 100px;
+}
+
+.highlight{
+    font-family: "comic sans ms";
+    color: #59578A;
+}
+
+.page-heading{
+    font-family: "comic sans ms";
+    font-size: 28px;
+    color: brown;
+}
+
+.page-body{
+    margin-left: 50px;
+    margin-top: 50px;
+    width: 80%;
+}
+
+.page-entry{
+    margin: 50px 0;
+}
+
+.page-entry-heading{
+    color: #59578A;
+    font-size: 28px;
+}
+
+.page-entry-body{
+    margin: 20px 30px;
+}
+
+.linebreak{
+    display: initial;
+}
+
+@keyframes headeranimation {
+    0% {
+        background-color: #033F63;
+        color: #FEDC97;
+    }
+    50% {
+        background-color: #11132E;
+        color: #9CB865;
+    }
+    100% {
+        background-color: #033F63;
+        color: #FEDC97;
+    }
+}
+
+#header{
+    animation: headeranimation 10s infinite;
+    width: 400px;
+    height: 100%;
+    position: fixed;
+    justify-content: center;
+    text-align: center;
+}
+
+#header > button{
+    margin-top: 60px;
+    height: 100px;
+    width: 200px;
+    border-radius: 20px;
+    font-size: 30px;
+    transition: 0.2s;
+    background-color: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+#header > button:hover{
+    font-size: 33px;
+    transition: 0.1s;
+}
+
+#body{
+    background-color: #B8B7C9;
+    position: fixed;
+    margin-left: 400px;
+    width: calc( 100% - 400px );
+    height: 100%;
+    overflow-y: scroll;
+    padding-left: 50px;
+    padding-top: 50px;
+    overflow-y: scroll;
+}
+
+@media screen and (max-width:1000px){
+    :root{
+        --img-size: 150px;
+    }
+    #header{
+        width: 100%;
+        height: var(--header-height);
+    }
+    #header > button{
+        margin: 0;
+        width: 100px;
+        height: 50px;
+        font-size: 22px;
+    }
+    #header > button:hover{
+        font-size: 23px;
+    }
+    
+    #body{
+        margin-left: 0;
+        margin-top: var(--header-height);
+        width: 100%;
+        height: calc(100% - var(--header-height) - 50px);
+        padding-left: 10px;
+        padding-top: 20px;
+        padding-bottom: 50px;
+        overflow-x: auto;
+    }
+    
+    .linebreak{
+        display: none;
+    }
+
+    .page-heading{
+        font-size: 25px;
+    }
+
+    .page-body{
+        margin-left: 5px;
+        margin-top: 30px;
+        font-size: 18px;
+    }
+    
+    .page-entry{
+        margin: 20px 0;
+    }
+
+    .page-entry-heading{
+        font-size: 20px;
+    }
+    
+    .page-entry-body{
+        margin: 10px 5px;
+        font-size: 18px;
+    }
+
+    a{
+        font-size: 15px;
+    }
+
+    .submitbutton{
+        width: 250px;
+    }
+    
+    input, textarea{
+        max-width: 250px;
+        min-width: 250px;
+        width: 250px;
+    }
+}

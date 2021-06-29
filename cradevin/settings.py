@@ -6,9 +6,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = '3m92wsuh1$sb^sod5n#44nio2+jbfbj9e)e@h0tgud&okse!8c'
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cradevin.herokuapp.com', 'localhost:8000']
 
 INSTALLED_APPS = [
     'api.apps.ApiConfig',
